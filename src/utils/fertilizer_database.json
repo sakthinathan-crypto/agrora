@@ -1,0 +1,39 @@
+{
+  "Paddy": {
+    "LOW_NITROGEN": {
+      "type": "Chemical",
+      "name": "Urea",
+      "composition": {
+        "Nitrogen": "46%",
+        "Phosphorus": "0%",
+        "Potassium": "0%"
+      },
+      "usage": "50kg/hectare",
+      "warning": "Avoid overuse"
+    },
+
+    "LOW_POTASSIUM": {
+      "type": "Chemical",
+      "name": "Muriate of Potash",
+      "composition": {
+        "Nitrogen": "0%",
+        "Phosphorus": "0%",
+        "Potassium": "60%"
+      },
+      "usage": "40kg/hectare",
+      "warning": "Apply with irrigation"
+    }
+  },
+
+  "Groundnut": {
+    "LOW_NITROGEN": {
+      "type": "Organic",
+      "name": "Vermicompost",
+      "composition": {
+        "Organic Matter": "High"
+      },
+      "usage": "2 tons/hectare",
+      "warning": "Apply before sowing"
+    }
+  }
+}

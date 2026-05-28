@@ -1,0 +1,110 @@
+fertilizer_name,type,nitrogen,phosphorus,potassium,suitable_for,supported_crops,soil_ph_range,best_growth_stage,fertilizer_category
+Urea,Chemical,46.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Sugarcane,Cotton",6.0-7.5,vegetative,Nitrogen-Rich
+DAP,Chemical,18.0,46.0,0.0,LOW_PHOSPHORUS,"Paddy,Groundnut,Potato,Tomato,Sunflower",5.5-7.0,seedling,Phosphorus-Rich
+MOP,Chemical,0.0,0.0,60.0,LOW_POTASSIUM,"Potato,Tomato,Banana,Cotton,Groundnut",6.0-7.5,fruiting,Potassium-Rich
+Vermicompost,Organic,1.5,1.0,1.5,BALANCED,"Paddy,Tomato,Potato,Groundnut,Maize,Sunflower,Cotton",5.5-7.5,seedling,Nitrogen-Rich
+Compost,Organic,1.2,0.6,1.0,BALANCED,"Paddy,Maize,Wheat,Groundnut,Cotton,Sunflower",5.5-8.0,seedling,Nitrogen-Rich
+Bone Meal,Organic,4.0,20.0,0.0,LOW_PHOSPHORUS,"Tomato,Potato,Groundnut,Sunflower,Chilli",6.0-7.5,seedling,Phosphorus-Rich
+Neem Cake,Organic,5.0,1.0,1.5,LOW_NITROGEN,"Cotton,Groundnut,Paddy,Maize,Tomato",6.0-7.5,vegetative,Nitrogen-Rich
+NPK 19:19:19,Chemical,19.0,19.0,19.0,BALANCED,"Tomato,Potato,Maize,Cotton,Sunflower,Groundnut",5.5-7.0,vegetative,Nitrogen-Rich
+Ammonium Sulphate,Chemical,21.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Cotton,Sugarcane,Wheat",5.5-6.5,vegetative,Nitrogen-Rich
+Single Super Phosphate,Chemical,0.0,16.0,0.0,LOW_PHOSPHORUS,"Paddy,Wheat,Groundnut,Potato,Sunflower",5.5-7.0,seedling,Phosphorus-Rich
+Triple Super Phosphate,Chemical,0.0,46.0,0.0,LOW_PHOSPHORUS,"Paddy,Maize,Groundnut,Sunflower,Cotton",5.5-7.0,seedling,Phosphorus-Rich
+Muriate of Potash,Chemical,0.0,0.0,60.0,LOW_POTASSIUM,"Potato,Tomato,Banana,Maize,Sugarcane",6.0-7.5,fruiting,Potassium-Rich
+Calcium Ammonium Nitrate,Chemical,26.0,0.0,0.0,LOW_NITROGEN,"Paddy,Wheat,Maize,Tomato,Potato",5.5-7.5,vegetative,Nitrogen-Rich
+Potassium Nitrate,Chemical,13.0,0.0,46.0,LOW_POTASSIUM,"Tomato,Potato,Grapes,Cotton,Sunflower",5.5-7.0,fruiting,Potassium-Rich
+Potassium Sulphate,Chemical,0.0,0.0,50.0,LOW_POTASSIUM,"Potato,Groundnut,Tobacco,Sunflower,Cotton",5.5-7.0,fruiting,Potassium-Rich
+Zinc Sulphate,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Wheat,Cotton,Groundnut",5.5-7.0,vegetative,Nitrogen-Rich
+Ferrous Sulphate,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Groundnut,Tomato,Maize,Sugarcane",5.5-6.5,vegetative,Nitrogen-Rich
+Magnesium Sulphate,Chemical,0.0,0.0,0.0,BALANCED,"Tomato,Potato,Paddy,Groundnut,Cotton",5.5-7.0,vegetative,Nitrogen-Rich
+Borax,Chemical,0.0,0.0,0.0,BALANCED,"Sunflower,Cotton,Groundnut,Tomato,Potato",6.0-7.5,flowering,Nitrogen-Rich
+Copper Sulphate,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Wheat,Groundnut,Cotton",5.5-7.0,vegetative,Nitrogen-Rich
+Green Manure,Organic,2.0,0.5,1.5,LOW_NITROGEN,"Paddy,Maize,Cotton,Groundnut,Sugarcane",5.5-7.5,seedling,Nitrogen-Rich
+Fish Meal,Organic,9.0,6.0,2.0,LOW_NITROGEN,"Tomato,Potato,Groundnut,Chilli,Paddy",5.5-7.0,vegetative,Nitrogen-Rich
+Blood Meal,Organic,13.0,1.0,0.5,LOW_NITROGEN,"Maize,Tomato,Cotton,Sunflower,Groundnut",5.5-6.5,vegetative,Nitrogen-Rich
+Wood Ash,Organic,0.0,2.0,6.0,LOW_POTASSIUM,"Tomato,Potato,Maize,Groundnut,Cotton",6.5-8.0,vegetative,Potassium-Rich
+Seaweed Extract,Organic,1.0,0.5,2.0,BALANCED,"Paddy,Tomato,Potato,Groundnut,Cotton,Maize",5.5-7.5,flowering,Potassium-Rich
+Poultry Manure,Organic,3.5,2.5,2.0,BALANCED,"Paddy,Maize,Cotton,Groundnut,Tomato,Sunflower",5.5-7.5,seedling,Nitrogen-Rich
+Cow Dung Manure,Organic,0.5,0.25,0.5,BALANCED,"Paddy,Maize,Wheat,Cotton,Groundnut,Tomato",5.5-8.0,seedling,Nitrogen-Rich
+Mustard Cake,Organic,5.2,1.8,1.2,LOW_NITROGEN,"Cotton,Groundnut,Maize,Sugarcane,Paddy",5.5-7.5,vegetative,Nitrogen-Rich
+Rock Phosphate,Organic,0.0,20.0,0.0,LOW_PHOSPHORUS,"Groundnut,Paddy,Cotton,Sunflower,Maize",5.0-6.5,seedling,Phosphorus-Rich
+Humic Acid,Organic,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Tomato,Potato,Cotton,Groundnut",5.0-7.5,seedling,Nitrogen-Rich
+NPK 10:26:26,Chemical,10.0,26.0,26.0,BALANCED,"Potato,Tomato,Groundnut,Sunflower,Maize",5.5-7.0,vegetative,Phosphorus-Rich
+NPK 12:32:16,Chemical,12.0,32.0,16.0,LOW_PHOSPHORUS,"Paddy,Wheat,Maize,Cotton,Groundnut",5.5-7.0,seedling,Phosphorus-Rich
+NPK 14:35:14,Chemical,14.0,35.0,14.0,LOW_PHOSPHORUS,"Sunflower,Groundnut,Potato,Cotton,Tomato",5.5-7.0,seedling,Phosphorus-Rich
+NPK 20:20:0,Chemical,20.0,20.0,0.0,BALANCED,"Paddy,Wheat,Maize,Cotton,Sunflower",5.5-7.0,vegetative,Nitrogen-Rich
+NPK 16:16:16,Chemical,16.0,16.0,16.0,BALANCED,"Tomato,Potato,Paddy,Maize,Cotton,Groundnut",5.5-7.0,vegetative,Nitrogen-Rich
+Ammonium Chloride,Chemical,25.0,0.0,0.0,LOW_NITROGEN,"Paddy,Wheat,Sugarcane,Cotton",5.5-6.5,vegetative,Nitrogen-Rich
+Sodium Nitrate,Chemical,16.0,0.0,0.0,LOW_NITROGEN,"Paddy,Tomato,Potato,Maize",6.0-7.5,vegetative,Nitrogen-Rich
+Calcium Nitrate,Chemical,15.0,0.0,0.0,LOW_NITROGEN,"Tomato,Potato,Paddy,Maize,Cotton",6.0-7.5,vegetative,Nitrogen-Rich
+Di-ammonium Phosphate,Chemical,18.0,46.0,0.0,LOW_PHOSPHORUS,"Paddy,Wheat,Maize,Groundnut,Sunflower",5.5-7.0,seedling,Phosphorus-Rich
+Potassium Chloride,Chemical,0.0,0.0,60.0,LOW_POTASSIUM,"Maize,Sugarcane,Cotton,Paddy,Groundnut",6.0-7.5,fruiting,Potassium-Rich
+Magnesium Nitrate,Chemical,11.0,0.0,0.0,BALANCED,"Tomato,Potato,Cotton,Groundnut,Sunflower",5.5-7.0,vegetative,Nitrogen-Rich
+Micronutrient Mix,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Tomato,Cotton,Groundnut,Sunflower",5.5-7.0,vegetative,Nitrogen-Rich
+Sulphur Powder,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Groundnut,Potato,Tomato,Maize",5.5-6.5,vegetative,Nitrogen-Rich
+Lime (Agricultural),Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Potato,Cotton",5.5-7.5,seedling,Nitrogen-Rich
+Gypsum,Chemical,0.0,0.0,0.0,BALANCED,"Groundnut,Cotton,Sunflower,Paddy,Maize",5.5-7.5,flowering,Nitrogen-Rich
+Dolomite,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Tomato,Cotton",5.5-7.0,seedling,Nitrogen-Rich
+Ammonium Bicarbonate,Chemical,17.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Sugarcane",5.5-7.0,vegetative,Nitrogen-Rich
+Nitro Phosphate,Chemical,20.0,20.0,0.0,BALANCED,"Paddy,Wheat,Maize,Cotton,Sunflower",5.5-7.0,vegetative,Nitrogen-Rich
+Fulvic Acid,Organic,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Tomato,Potato,Groundnut,Cotton",5.0-7.5,seedling,Nitrogen-Rich
+Castor Cake,Organic,4.5,1.5,1.3,LOW_NITROGEN,"Cotton,Groundnut,Maize,Sugarcane,Paddy",5.5-7.5,vegetative,Nitrogen-Rich
+Groundnut Cake,Organic,6.0,1.5,1.5,LOW_NITROGEN,"Cotton,Paddy,Maize,Groundnut,Tomato",5.5-7.5,vegetative,Nitrogen-Rich
+Cotton Seed Cake,Organic,3.9,1.7,1.6,BALANCED,"Cotton,Paddy,Maize,Sugarcane,Groundnut",5.5-7.5,vegetative,Nitrogen-Rich
+Sunflower Cake,Organic,3.5,1.2,1.0,LOW_NITROGEN,"Paddy,Maize,Cotton,Groundnut,Tomato",5.5-7.5,vegetative,Nitrogen-Rich
+Sheep Manure,Organic,0.7,0.3,0.9,BALANCED,"Paddy,Maize,Wheat,Tomato,Potato,Groundnut",5.5-7.5,seedling,Potassium-Rich
+Horse Manure,Organic,0.6,0.3,0.5,BALANCED,"Maize,Paddy,Groundnut,Sunflower,Cotton",5.5-7.5,seedling,Nitrogen-Rich
+Biochar,Organic,0.5,0.5,0.5,BALANCED,"Paddy,Maize,Groundnut,Tomato,Cotton,Sunflower",5.5-7.5,seedling,Nitrogen-Rich
+Azospirillum,Organic,0.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Sugarcane,Groundnut",6.0-7.5,seedling,Nitrogen-Rich
+Rhizobium,Organic,0.0,0.0,0.0,LOW_NITROGEN,"Groundnut,Soybean,Cowpea,Chickpea,Lentil",6.0-7.5,seedling,Nitrogen-Rich
+Phosphobacteria,Organic,0.0,0.0,0.0,LOW_PHOSPHORUS,"Paddy,Maize,Wheat,Groundnut,Sunflower",5.5-7.5,seedling,Nitrogen-Rich
+Potash Mobilizing Bacteria,Organic,0.0,0.0,0.0,LOW_POTASSIUM,"Paddy,Maize,Tomato,Cotton,Groundnut",5.5-7.5,seedling,Nitrogen-Rich
+Mycorrhiza,Organic,0.0,0.0,0.0,BALANCED,"Tomato,Potato,Groundnut,Maize,Cotton,Sunflower",5.5-7.0,seedling,Nitrogen-Rich
+Pseudomonas Fluorescens,Organic,0.0,0.0,0.0,BALANCED,"Paddy,Tomato,Maize,Groundnut,Cotton",5.5-7.0,seedling,Nitrogen-Rich
+VAM (Vesicular Arbuscular Mycorrhiza),Organic,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Tomato,Potato,Cotton",5.5-7.0,seedling,Nitrogen-Rich
+NPK 13:40:13,Chemical,13.0,40.0,13.0,LOW_PHOSPHORUS,"Tomato,Potato,Sunflower,Groundnut,Cotton",5.5-7.0,flowering,Phosphorus-Rich
+NPK 0:52:34,Chemical,0.0,52.0,34.0,LOW_PHOSPHORUS,"Tomato,Potato,Cotton,Groundnut,Sunflower",5.5-7.0,fruiting,Phosphorus-Rich
+Potassium Humate,Organic,0.0,0.0,10.0,LOW_POTASSIUM,"Paddy,Maize,Cotton,Groundnut,Tomato",5.0-7.5,vegetative,Potassium-Rich
+Amino Acid Fertilizer,Organic,10.0,0.0,0.0,LOW_NITROGEN,"Tomato,Potato,Maize,Cotton,Groundnut",5.5-7.5,vegetative,Nitrogen-Rich
+Liquid Seaweed,Organic,0.5,0.2,1.5,BALANCED,"Paddy,Tomato,Potato,Groundnut,Cotton,Maize",5.5-7.5,flowering,Potassium-Rich
+Fermented Plant Juice,Organic,1.0,0.5,2.0,BALANCED,"Paddy,Tomato,Maize,Groundnut,Cotton",5.5-7.5,vegetative,Potassium-Rich
+Panchagavya,Organic,1.5,1.0,1.5,BALANCED,"Paddy,Maize,Groundnut,Tomato,Cotton,Sunflower",5.5-7.5,vegetative,Nitrogen-Rich
+Jeevamrutha,Organic,0.5,0.5,1.0,BALANCED,"Paddy,Maize,Groundnut,Tomato,Cotton",5.5-7.5,seedling,Potassium-Rich
+Calcium Superphosphate,Chemical,0.0,18.0,0.0,LOW_PHOSPHORUS,"Paddy,Groundnut,Sunflower,Maize,Cotton",5.5-7.0,seedling,Phosphorus-Rich
+Ammonium Phosphate Sulphate,Chemical,16.0,20.0,0.0,BALANCED,"Paddy,Maize,Cotton,Groundnut,Sunflower",5.5-7.0,seedling,Phosphorus-Rich
+Urea Ammonium Nitrate,Chemical,32.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Cotton,Sugarcane",5.5-7.5,vegetative,Nitrogen-Rich
+Manganese Sulphate,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Potato,Cotton",5.5-6.5,vegetative,Nitrogen-Rich
+Molybdenum Trioxide,Chemical,0.0,0.0,0.0,BALANCED,"Groundnut,Soybean,Paddy,Cotton,Maize",5.5-7.0,vegetative,Nitrogen-Rich
+Calcium Chloride,Chemical,0.0,0.0,0.0,BALANCED,"Tomato,Potato,Paddy,Maize,Cotton",6.0-7.5,fruiting,Nitrogen-Rich
+Potassium Bicarbonate,Chemical,0.0,0.0,39.0,LOW_POTASSIUM,"Tomato,Potato,Grapes,Sunflower,Maize",6.0-7.5,fruiting,Potassium-Rich
+Slow Release Urea,Chemical,44.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Sugarcane,Cotton",6.0-7.5,vegetative,Nitrogen-Rich
+Coated DAP,Chemical,18.0,46.0,0.0,LOW_PHOSPHORUS,"Paddy,Maize,Groundnut,Sunflower,Cotton",5.5-7.0,seedling,Phosphorus-Rich
+Neem Coated Urea,Chemical,46.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Sugarcane,Cotton",6.0-7.5,vegetative,Nitrogen-Rich
+Biostimulant (Seaweed+Humic),Organic,1.0,0.5,2.0,BALANCED,"Paddy,Tomato,Potato,Maize,Cotton,Groundnut",5.5-7.5,flowering,Potassium-Rich
+Trichoderma,Organic,0.0,0.0,0.0,BALANCED,"Tomato,Potato,Paddy,Maize,Cotton,Groundnut",5.5-7.0,seedling,Nitrogen-Rich
+Bacillus Subtilis,Organic,0.0,0.0,0.0,BALANCED,"Tomato,Paddy,Maize,Groundnut,Cotton",5.5-7.5,vegetative,Nitrogen-Rich
+Potassium Thiosulphate,Chemical,0.0,0.0,25.0,LOW_POTASSIUM,"Tomato,Potato,Cotton,Groundnut,Sunflower",5.5-7.0,fruiting,Potassium-Rich
+Mono Ammonium Phosphate,Chemical,12.0,61.0,0.0,LOW_PHOSPHORUS,"Paddy,Maize,Groundnut,Tomato,Sunflower",5.5-7.0,seedling,Phosphorus-Rich
+Mono Potassium Phosphate,Chemical,0.0,52.0,34.0,LOW_PHOSPHORUS,"Tomato,Potato,Grapes,Cotton,Sunflower",5.5-7.0,fruiting,Phosphorus-Rich
+Potassium Magnesium Sulphate,Chemical,0.0,0.0,22.0,LOW_POTASSIUM,"Groundnut,Potato,Tomato,Sunflower,Cotton",5.5-7.0,fruiting,Potassium-Rich
+Chelated Iron,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Tomato,Sunflower",5.5-7.0,vegetative,Nitrogen-Rich
+Chelated Zinc,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Wheat,Cotton,Groundnut",5.5-7.0,vegetative,Nitrogen-Rich
+Chelated Manganese,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Tomato,Cotton",5.5-6.5,vegetative,Nitrogen-Rich
+Chelated Copper,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Groundnut,Sunflower,Cotton",5.5-7.0,vegetative,Nitrogen-Rich
+Chelated Boron,Chemical,0.0,0.0,0.0,BALANCED,"Sunflower,Cotton,Groundnut,Tomato,Potato",6.0-7.5,flowering,Nitrogen-Rich
+Vermi-wash,Organic,1.0,0.5,1.0,BALANCED,"Paddy,Tomato,Potato,Maize,Groundnut,Cotton",5.5-7.5,seedling,Nitrogen-Rich
+Organic Liquid Fertilizer (FYM Based),Organic,2.0,1.0,2.0,BALANCED,"Paddy,Maize,Groundnut,Tomato,Cotton,Sunflower",5.5-7.5,vegetative,Nitrogen-Rich
+Biodynamic Compost,Organic,1.8,0.8,1.5,BALANCED,"Paddy,Maize,Tomato,Groundnut,Cotton,Sunflower",5.5-7.5,seedling,Nitrogen-Rich
+Press Mud Compost,Organic,1.2,0.7,0.5,BALANCED,"Sugarcane,Paddy,Maize,Cotton,Groundnut",5.5-7.5,seedling,Nitrogen-Rich
+City Compost,Organic,1.5,1.0,1.2,BALANCED,"Paddy,Maize,Cotton,Sunflower,Groundnut,Tomato",5.5-7.5,seedling,Nitrogen-Rich
+Tobacco Stem Ash,Organic,0.0,1.0,6.0,LOW_POTASSIUM,"Paddy,Maize,Tomato,Potato,Cotton",6.0-7.5,vegetative,Potassium-Rich
+Sugarcane Bagasse Compost,Organic,0.8,0.5,0.7,BALANCED,"Sugarcane,Paddy,Maize,Cotton,Groundnut",5.5-7.5,seedling,Nitrogen-Rich
+Coconut Coir Compost,Organic,0.4,0.3,0.6,BALANCED,"Paddy,Maize,Tomato,Potato,Groundnut",5.5-7.5,seedling,Potassium-Rich
+Leaf Mold Compost,Organic,0.5,0.4,0.3,BALANCED,"Tomato,Potato,Maize,Paddy,Groundnut",5.5-7.5,seedling,Nitrogen-Rich
+Potassium Silicate,Chemical,0.0,0.0,8.0,LOW_POTASSIUM,"Paddy,Maize,Tomato,Cotton,Groundnut",5.5-7.5,vegetative,Potassium-Rich
+Silicon Dioxide,Chemical,0.0,0.0,0.0,BALANCED,"Paddy,Maize,Sugarcane,Cotton,Groundnut",5.5-7.5,vegetative,Nitrogen-Rich
+NPK 28:28:0,Chemical,28.0,28.0,0.0,BALANCED,"Paddy,Wheat,Maize,Cotton,Groundnut",5.5-7.0,vegetative,Nitrogen-Rich
+NPK 0:0:50,Chemical,0.0,0.0,50.0,LOW_POTASSIUM,"Potato,Tomato,Cotton,Groundnut,Sunflower",6.0-7.5,fruiting,Potassium-Rich
+Ammonia Solution,Chemical,25.0,0.0,0.0,LOW_NITROGEN,"Paddy,Maize,Wheat,Sugarcane,Cotton",6.0-7.5,vegetative,Nitrogen-Rich
+Compost Tea,Organic,1.0,0.5,1.0,BALANCED,"Paddy,Maize,Tomato,Potato,Groundnut,Cotton",5.5-7.5,vegetative,Nitrogen-Rich
+Guar Gum Meal,Organic,2.5,1.0,1.5,LOW_NITROGEN,"Paddy,Maize,Groundnut,Cotton,Tomato",5.5-7.5,vegetative,Nitrogen-Rich
