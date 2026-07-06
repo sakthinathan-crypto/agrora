@@ -15,23 +15,20 @@
     <style>
 
         body {
-
             font-family: Arial;
             background: #f4f4f4;
             padding: 30px;
         }
 
         .container {
-
             background: white;
             padding: 25px;
             border-radius: 10px;
-            max-width: 700px;
+            max-width: 900px;
             margin: auto;
         }
 
         h1 {
-
             text-align: center;
             color: green;
         }
@@ -49,28 +46,23 @@
         }
 
         button {
-
             background: green;
             color: white;
-            font-size: 16px;
             cursor: pointer;
-        }
-
-        .result {
-
-            background: #eef;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 10px;
+            font-size: 15px;
         }
 
         .crop-card {
 
-            background: white;
+            background: #f9f9f9;
             padding: 15px;
-            margin-top: 15px;
             border-radius: 10px;
+            margin-top: 15px;
             border-left: 5px solid green;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
     </style>
@@ -87,68 +79,43 @@
 
     <form method="POST">
 
-        <!-- District -->
-
         <label>District</label>
 
         <select name="district" required>
 
             <option value="Thanjavur">Thanjavur</option>
-
             <option value="Tiruvarur">Tiruvarur</option>
-
             <option value="Nagapattinam">Nagapattinam</option>
-
             <option value="Erode">Erode</option>
-
             <option value="Coimbatore">Coimbatore</option>
-
             <option value="Salem">Salem</option>
-
             <option value="Nilgiris">Nilgiris</option>
-
-            <option value="Ramanathapuram">
-                Ramanathapuram
-            </option>
-
-            <option value="Sivagangai">
-                Sivagangai
-            </option>
-
-            <option value="Trichy">
-                Trichy
-            </option>
+            <option value="Ramanathapuram">Ramanathapuram</option>
+            <option value="Sivagangai">Sivagangai</option>
+            <option value="Trichy">Trichy</option>
 
         </select>
 
-        <!-- Soil Inputs -->
-
         <label>Soil pH</label>
-
         <input type="number"
                step="0.1"
                name="ph"
                required>
 
         <label>Nitrogen</label>
-
         <input type="number"
                name="nitrogen"
                required>
 
         <label>Phosphorus</label>
-
         <input type="number"
                name="phosphorus"
                required>
 
         <label>Potassium</label>
-
         <input type="number"
                name="potassium"
                required>
-
-        <!-- Moisture -->
 
         <label>Moisture</label>
 
@@ -160,8 +127,6 @@
 
         </select>
 
-        <!-- Humidity -->
-
         <label>Humidity</label>
 
         <select name="humidity">
@@ -172,8 +137,6 @@
 
         </select>
 
-        <!-- Temperature -->
-
         <label>Temperature</label>
 
         <input type="number"
@@ -181,75 +144,102 @@
                required>
 
         <button type="submit">
-
             Analyze
-
         </button>
 
     </form>
 
     {% if results %}
 
-    <div class="result">
+    <hr>
 
-        <h2>
-            Top Recommended Crops
-        </h2>
+    <h2>
+        Top 3 Recommended Crops
+    </h2>
 
-        {% for crop in results %}
+    {% for crop in results %}
 
-        <div class="crop-card">
+    <div class="crop-card">
 
-            <h3>
-                {{ crop.crop_name }}
-            </h3>
+        <h3>
+            {{ crop.crop_name }}
+        </h3>
 
-            <p>
-                Suitability Score:
-                {{ crop.suitability_score }}
-            </p>
+        <p>
+            <strong>Suitability Score:</strong>
+            {{ crop.suitability_score }}
+        </p>
 
-            <p>
-                Growing Season:
-                {{ crop.growing_season }}
-            </p>
+        <p>
+            <strong>Growing Season:</strong>
+            {{ crop.growing_season }}
+        </p>
 
-            <p>
-                Expected Growth Days:
-                {{ crop.expected_growth_days }}
-            </p>
+        <p>
+            <strong>Expected Growth Days:</strong>
+            {{ crop.expected_growth_days }}
+        </p>
 
-            <p>
-                Yield Category:
-                {{ crop.yield_category }}
-            </p>
+        <p>
+            <strong>Yield Category:</strong>
+            {{ crop.yield_category }}
+        </p>
 
-            <p>
-                Water Requirement:
-                {{ crop.water_requirement }}
-            </p>
+        <p>
+            <strong>Water Requirement:</strong>
+            {{ crop.water_requirement }}
+        </p>
 
-            <p>
-                Reasons:
-            </p>
+        <h4>
+            Recommendation Reasons
+        </h4>
 
-            <ul>
+        <ul>
 
-                {% for reason in crop.recommendation_reasons %}
+            {% for reason in crop.recommendation_reasons %}
 
-                <li>
-                    {{ reason }}
-                </li>
+            <li>
+                {{ reason }}
+            </li>
 
-                {% endfor %}
+            {% endfor %}
 
-            </ul>
+        </ul>
 
-        </div>
+        <form action="/fertilizer"
+              method="POST">
 
-        {% endfor %}
+            <input type="hidden"
+                   name="crop"
+                   value="{{ crop.crop_name }}">
+
+            <input type="hidden"
+                   name="ph"
+                   value="{{ ph }}">
+
+            <input type="hidden"
+                   name="nitrogen"
+                   value="{{ nitrogen }}">
+
+            <input type="hidden"
+                   name="phosphorus"
+                   value="{{ phosphorus }}">
+
+            <input type="hidden"
+                   name="potassium"
+                   value="{{ potassium }}">
+
+            <button type="submit">
+
+                View Fertilizer Recommendation
+
+            </button>
+
+        </form>
 
     </div>
+
+    {% endfor %}
 
     {% endif %}
 
