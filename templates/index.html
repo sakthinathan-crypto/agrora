@@ -5,245 +5,1640 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>
-        Smart Agriculture System
+        AGRORA - Smart Agriculture System
     </title>
+
 
     <style>
 
-        body {
-            font-family: Arial;
-            background: #f4f4f4;
-            padding: 30px;
+        * {
+            box-sizing: border-box;
         }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5faf7,
+                    #ffffff
+                );
+
+            color: #123524;
+        }
+
 
         .container {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            max-width: 900px;
-            margin: auto;
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin: 35px auto;
         }
 
-        h1 {
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .header {
+
             text-align: center;
-            color: green;
+
+            margin-bottom: 30px;
         }
 
-        input,
-        select,
-        button {
 
-            width: 100%;
-            padding: 12px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        .header h1 {
+
+            margin: 0;
+
+            color: #087f46;
+
+            font-size: 34px;
         }
 
-        button {
-            background: green;
-            color: white;
-            cursor: pointer;
+
+        .header p {
+
+            margin-top: 8px;
+
+            color: #607d6b;
+
             font-size: 15px;
         }
 
-        .crop-card {
 
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            border-left: 5px solid green;
+        /* =====================================================
+           CARD
+        ===================================================== */
+
+        .card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 28px;
+
+            margin-bottom: 25px;
+
+            border: 1px solid #dcebe1;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 80, 40, 0.08);
         }
 
-        ul {
-            padding-left: 20px;
+
+        .card h2 {
+
+            margin-top: 0;
+
+            color: #087f46;
+
+            font-size: 23px;
+        }
+
+
+        .card-description {
+
+            color: #65786d;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .form-group label {
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+
+            color: #315d45;
+        }
+
+
+        .form-group input,
+        .form-group select {
+
+            padding: 12px 14px;
+
+            border-radius: 9px;
+
+            border: 1px solid #cbdad0;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus {
+
+            border-color: #168c55;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(22, 140, 85, 0.10);
+        }
+
+
+        .full-width {
+
+            grid-column: 1 / -1;
+        }
+
+
+        .btn {
+
+            width: 100%;
+
+            border: none;
+
+            border-radius: 9px;
+
+            padding: 13px;
+
+            background: #188b55;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-top: 10px;
+        }
+
+
+        .btn:hover {
+
+            background: #106d42;
+        }
+
+
+        /* =====================================================
+           FIELD CONDITIONS
+        ===================================================== */
+
+        .condition-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+
+        .condition-card {
+
+            background: #f5f8f6;
+
+            border-radius: 12px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            border: 1px solid #e3ebe6;
+        }
+
+
+        .condition-label {
+
+            font-size: 13px;
+
+            color: #6b7c72;
+
+            margin-bottom: 7px;
+        }
+
+
+        .condition-value {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #087f46;
+        }
+
+
+        /* =====================================================
+           CROP RESULTS
+        ===================================================== */
+
+        .crop-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+
+        .crop-card {
+
+            padding: 20px;
+
+            border-radius: 13px;
+
+            background: #f7faf8;
+
+            border: 1px solid #e1ebe4;
+        }
+
+
+        .crop-rank {
+
+            color: #789184;
+
+            font-size: 13px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .crop-name {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            color: #087f46;
+
+            margin-bottom: 8px;
+        }
+
+
+        .crop-score {
+
+            font-size: 14px;
+
+            color: #5e7066;
+        }
+
+
+        .fertilizer-btn {
+
+            margin-top: 15px;
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #188b55;
+
+            color: white;
+
+            padding: 10px 16px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           RISK RESULT
+        ===================================================== */
+
+        .risk-box {
+
+            padding: 20px;
+
+            border-radius: 13px;
+
+            background: #f5f8f6;
+
+            border-left: 5px solid #188b55;
+        }
+
+
+        .risk-status {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #087f46;
+
+            margin-bottom: 10px;
+        }
+
+
+        .risk-item {
+
+            padding: 8px 0;
+
+            border-bottom: 1px solid #e4ebe7;
+        }
+
+
+        .risk-item:last-child {
+
+            border-bottom: none;
+        }
+
+
+        /* =====================================================
+           DISEASE DETECTION
+        ===================================================== */
+
+        .disease-card {
+
+            background: #f8fbf9;
+
+            border: 1px solid #dbe9df;
+
+            border-radius: 15px;
+
+            padding: 20px;
+
+            margin-top: 10px;
+        }
+
+
+        .upload-box {
+
+            background: white;
+
+            border: 1px solid #d6ded9;
+
+            border-radius: 10px;
+
+            padding: 18px;
+        }
+
+
+        .upload-box label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+            color: #315d45;
+        }
+
+
+        .upload-box input[type="file"] {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccd7d0;
+
+            border-radius: 8px;
+
+            background: white;
+        }
+
+
+        .detect-btn {
+
+            width: 100%;
+
+            margin-top: 14px;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #188b55;
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        .detect-btn:hover {
+
+            background: #106d42;
+        }
+
+
+        /* =====================================================
+           DISEASE RESULT
+        ===================================================== */
+
+        .disease-result {
+
+            margin-top: 20px;
+
+            padding: 24px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #188b55;
+
+            box-shadow:
+                0 6px 20px
+                rgba(0, 70, 40, 0.07);
+        }
+
+
+        .disease-result h3 {
+
+            margin-top: 0;
+
+            color: #087f46;
+
+            font-size: 20px;
+        }
+
+
+        .disease-result-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 14px;
+
+            margin-top: 15px;
+        }
+
+
+        .disease-info {
+
+            background: #f6f8f7;
+
+            border-radius: 10px;
+
+            padding: 15px;
+        }
+
+
+        .disease-info-title {
+
+            font-size: 13px;
+
+            color: #687970;
+
+            margin-bottom: 7px;
+        }
+
+
+        .disease-info-value {
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            color: #087f46;
+
+            word-break: break-word;
+        }
+
+
+        .action-box {
+
+            margin-top: 15px;
+
+            padding: 16px;
+
+            background: #f5faf7;
+
+            border-radius: 10px;
+
+            border: 1px solid #dfebe3;
+        }
+
+
+        .action-box h4 {
+
+            margin-top: 0;
+
+            margin-bottom: 8px;
+
+            color: #087f46;
+        }
+
+
+        .action-box p {
+
+            margin: 0;
+
+            line-height: 1.6;
+
+            color: #43564a;
+        }
+
+
+        /* =====================================================
+           ERROR
+        ===================================================== */
+
+        .error-box {
+
+            margin-top: 15px;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            background: #fff5f5;
+
+            border: 1px solid #f0caca;
+
+            color: #a52c2c;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+
+            text-align: center;
+
+            margin: 35px 0;
+
+            color: #708077;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (
+            max-width: 800px
+        ) {
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .condition-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .crop-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .disease-result-grid {
+
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (
+            max-width: 500px
+        ) {
+
+            .container {
+
+                width: 95%;
+
+                margin: 20px auto;
+            }
+
+
+            .card {
+
+                padding: 18px;
+            }
+
+
+            .condition-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .header h1 {
+
+                font-size: 27px;
+            }
         }
 
     </style>
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
-    <h1>
-        Smart Agriculture Crop Recommendation
-    </h1>
 
-    <form method="POST">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-        <label>District</label>
+    <div class="header">
 
-        <select name="district" required>
-
-            <option value="Thanjavur">Thanjavur</option>
-            <option value="Tiruvarur">Tiruvarur</option>
-            <option value="Nagapattinam">Nagapattinam</option>
-            <option value="Erode">Erode</option>
-            <option value="Coimbatore">Coimbatore</option>
-            <option value="Salem">Salem</option>
-            <option value="Nilgiris">Nilgiris</option>
-            <option value="Ramanathapuram">Ramanathapuram</option>
-            <option value="Sivagangai">Sivagangai</option>
-            <option value="Trichy">Trichy</option>
-
-        </select>
-
-        <label>Soil pH</label>
-        <input type="number"
-               step="0.1"
-               name="ph"
-               required>
-
-        <label>Nitrogen</label>
-        <input type="number"
-               name="nitrogen"
-               required>
-
-        <label>Phosphorus</label>
-        <input type="number"
-               name="phosphorus"
-               required>
-
-        <label>Potassium</label>
-        <input type="number"
-               name="potassium"
-               required>
-
-        <label>Moisture</label>
-
-        <select name="moisture">
-
-            <option>LOW</option>
-            <option>MEDIUM</option>
-            <option>HIGH</option>
-
-        </select>
-
-        <label>Humidity</label>
-
-        <select name="humidity">
-
-            <option>LOW</option>
-            <option>MEDIUM</option>
-            <option>HIGH</option>
-
-        </select>
-
-        <label>Temperature</label>
-
-        <input type="number"
-               name="temperature"
-               required>
-
-        <button type="submit">
-            Analyze
-        </button>
-
-    </form>
-
-    {% if results %}
-
-    <hr>
-
-    <h2>
-        Top 3 Recommended Crops
-    </h2>
-
-    {% for crop in results %}
-
-    <div class="crop-card">
-
-        <h3>
-            {{ crop.crop_name }}
-        </h3>
+        <h1>
+            🌱 AGRORA
+        </h1>
 
         <p>
-            <strong>Suitability Score:</strong>
-            {{ crop.suitability_score }}
+            AI-Powered Smart Agriculture System
         </p>
 
-        <p>
-            <strong>Growing Season:</strong>
-            {{ crop.growing_season }}
+    </div>
+
+
+
+    <!-- =====================================================
+         FIELD ANALYSIS
+    ====================================================== -->
+
+    <div class="card">
+
+        <h2>
+            🌾 Field Analysis
+        </h2>
+
+        <p class="card-description">
+
+            Enter the current field and soil conditions
+            to get crop recommendations and agricultural
+            risk analysis.
+
         </p>
 
-        <p>
-            <strong>Expected Growth Days:</strong>
-            {{ crop.expected_growth_days }}
-        </p>
 
-        <p>
-            <strong>Yield Category:</strong>
-            {{ crop.yield_category }}
-        </p>
+        <form
+            method="POST"
+            action="/"
+        >
 
-        <p>
-            <strong>Water Requirement:</strong>
-            {{ crop.water_requirement }}
-        </p>
+            <div class="form-grid">
 
-        <h4>
-            Recommendation Reasons
-        </h4>
 
-        <ul>
+                <!-- DISTRICT -->
 
-            {% for reason in crop.recommendation_reasons %}
+                <div class="form-group">
 
-            <li>
-                {{ reason }}
-            </li>
+                    <label>
+                        District
+                    </label>
 
-            {% endfor %}
+                    <input
+                        type="text"
+                        name="district"
+                        placeholder="Enter district"
+                        required
+                    >
 
-        </ul>
+                </div>
 
-        <form action="/fertilizer"
-              method="POST">
 
-            <input type="hidden"
-                   name="crop"
-                   value="{{ crop.crop_name }}">
+                <!-- PH -->
 
-            <input type="hidden"
-                   name="ph"
-                   value="{{ ph }}">
+                <div class="form-group">
 
-            <input type="hidden"
-                   name="nitrogen"
-                   value="{{ nitrogen }}">
+                    <label>
+                        Soil pH
+                    </label>
 
-            <input type="hidden"
-                   name="phosphorus"
-                   value="{{ phosphorus }}">
+                    <input
+                        type="number"
+                        name="ph"
+                        step="0.1"
+                        placeholder="Example: 6.5"
+                        required
+                    >
 
-            <input type="hidden"
-                   name="potassium"
-                   value="{{ potassium }}">
+                </div>
 
-            <button type="submit">
 
-                View Fertilizer Recommendation
+                <!-- NITROGEN -->
 
-            </button>
+                <div class="form-group">
+
+                    <label>
+                        Nitrogen (N)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="nitrogen"
+                        placeholder="N value"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHOSPHORUS -->
+
+                <div class="form-group">
+
+                    <label>
+                        Phosphorus (P)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="phosphorus"
+                        placeholder="P value"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- POTASSIUM -->
+
+                <div class="form-group">
+
+                    <label>
+                        Potassium (K)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="potassium"
+                        placeholder="K value"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MOISTURE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Soil Moisture (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="moisture"
+                        step="0.1"
+                        min="0"
+                        max="100"
+                        placeholder="Example: 50"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- HUMIDITY -->
+
+                <div class="form-group">
+
+                    <label>
+                        Humidity (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="humidity"
+                        step="0.1"
+                        min="0"
+                        max="100"
+                        placeholder="Example: 60"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TEMPERATURE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Temperature (°C)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="temperature"
+                        step="0.1"
+                        placeholder="Example: 27.8"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <div class="form-group full-width">
+
+                    <button
+                        type="submit"
+                        class="btn"
+                    >
+                        🌱 Analyze Field
+                    </button>
+
+                </div>
+
+            </div>
 
         </form>
 
     </div>
 
-    {% endfor %}
+
+
+    <!-- =====================================================
+         CURRENT FIELD CONDITIONS
+    ====================================================== -->
+
+    {% if sensor_data %}
+
+    <div class="card">
+
+        <h2>
+            📊 Current Field Conditions
+        </h2>
+
+
+        <div class="condition-grid">
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Nitrogen
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.nitrogen }}
+                </div>
+
+            </div>
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Phosphorus
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.phosphorus }}
+                </div>
+
+            </div>
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Potassium
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.potassium }}
+                </div>
+
+            </div>
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Soil pH
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.ph }}
+                </div>
+
+            </div>
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Moisture
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.moisture }}%
+                </div>
+
+            </div>
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Humidity
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.humidity }}%
+                </div>
+
+            </div>
+
+
+            <div class="condition-card">
+
+                <div class="condition-label">
+                    Temperature
+                </div>
+
+                <div class="condition-value">
+                    {{ sensor_data.temperature }}°C
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
     {% endif %}
 
+
+
+    <!-- =====================================================
+         CROP RECOMMENDATION
+    ====================================================== -->
+
+    {% if results %}
+
+    <div class="card">
+
+        <h2>
+            🌾 Recommended Crops
+        </h2>
+
+        <p class="card-description">
+            Top crop recommendations based on the
+            provided soil and environmental conditions.
+        </p>
+
+
+        <div class="crop-grid">
+
+
+            {% for crop in results[:3] %}
+
+            <div class="crop-card">
+
+                <div class="crop-rank">
+
+                    Recommendation #{{ loop.index }}
+
+                </div>
+
+
+                <div class="crop-name">
+
+                    {% if crop is mapping %}
+
+                        {{
+                            crop.get("crop")
+                            or
+                            crop.get("crop_name")
+                            or
+                            crop.get("name")
+                            or
+                            "Unknown Crop"
+                        }}
+
+                    {% else %}
+
+                        {{ crop }}
+
+                    {% endif %}
+
+                </div>
+
+
+                {% if crop is mapping %}
+
+                    {% if crop.get("suitability_score") is not none %}
+
+                    <div class="crop-score">
+
+                        Suitability Score:
+                        <strong>
+                            {{ crop.get("suitability_score") }}
+                        </strong>
+
+                    </div>
+
+                    {% elif crop.get("score") is not none %}
+
+                    <div class="crop-score">
+
+                        Score:
+                        <strong>
+                            {{ crop.get("score") }}
+                        </strong>
+
+                    </div>
+
+                    {% endif %}
+
+                {% endif %}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+
+    <!-- =====================================================
+         AGRICULTURAL RISK
+    ====================================================== -->
+
+    {% if risk_result %}
+
+    <div class="card">
+
+        <h2>
+            ⚠️ Agricultural Risk Assessment
+        </h2>
+
+
+        <div class="risk-box">
+
+
+            {% if risk_result.status %}
+
+            <div class="risk-status">
+
+                {{ risk_result.status }}
+
+            </div>
+
+            {% endif %}
+
+
+            {% if risk_result.severity %}
+
+            <p>
+
+                <strong>
+                    Severity:
+                </strong>
+
+                {{ risk_result.severity }}
+
+            </p>
+
+            {% endif %}
+
+
+            {% if risk_result.risks %}
+
+                {% for risk in risk_result.risks %}
+
+                <div class="risk-item">
+
+                    {% if risk is mapping %}
+
+                        <strong>
+                            {{
+                                risk.get("type")
+                                or
+                                risk.get("risk")
+                                or
+                                risk.get("name")
+                                or
+                                "Risk"
+                            }}
+                        </strong>
+
+                        {% if risk.get("description") %}
+
+                        <br>
+
+                        {{ risk.get("description") }}
+
+                        {% endif %}
+
+                    {% else %}
+
+                        {{ risk }}
+
+                    {% endif %}
+
+                </div>
+
+                {% endfor %}
+
+            {% endif %}
+
+
+            {% if risk_result.recommendation %}
+
+            <p>
+
+                <strong>
+                    Recommendation:
+                </strong>
+
+                {{ risk_result.recommendation }}
+
+            </p>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+
+    <!-- =====================================================
+         FERTILIZER
+    ====================================================== -->
+
+    {% if results %}
+
+    <div class="card">
+
+        <h2>
+            🧪 Fertilizer Recommendation
+        </h2>
+
+        <p class="card-description">
+
+            Use the recommended crop and soil nutrient
+            values to generate fertilizer suggestions.
+
+        </p>
+
+
+        <form
+            method="POST"
+            action="/fertilizer"
+        >
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Crop
+                    </label>
+
+                    <input
+                        type="text"
+                        name="crop"
+                        value="{{
+                            results[0].get('crop')
+                            if results[0] is mapping
+                            else results[0]
+                        }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Soil pH
+                    </label>
+
+                    <input
+                        type="number"
+                        name="ph"
+                        step="0.1"
+                        value="{{
+                            sensor_data.ph
+                            if sensor_data
+                            else ''
+                        }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Nitrogen
+                    </label>
+
+                    <input
+                        type="number"
+                        name="nitrogen"
+                        value="{{
+                            sensor_data.nitrogen
+                            if sensor_data
+                            else ''
+                        }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phosphorus
+                    </label>
+
+                    <input
+                        type="number"
+                        name="phosphorus"
+                        value="{{
+                            sensor_data.phosphorus
+                            if sensor_data
+                            else ''
+                        }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Potassium
+                    </label>
+
+                    <input
+                        type="number"
+                        name="potassium"
+                        value="{{
+                            sensor_data.potassium
+                            if sensor_data
+                            else ''
+                        }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <button
+                        type="submit"
+                        class="btn"
+                    >
+                        🧪 Get Fertilizer Recommendation
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    {% endif %}
+
+
+
+    <!-- =====================================================
+         DISEASE DETECTION
+    ====================================================== -->
+
+    <div class="card">
+
+        <h2>
+            🔬 Crop Disease Detection
+        </h2>
+
+        <p class="card-description">
+
+            Upload a crop leaf image and let the AGRORA
+            AI model analyze it.
+
+        </p>
+
+
+        <div class="disease-card">
+
+
+            <form
+                method="POST"
+                action="/detect-disease"
+                enctype="multipart/form-data"
+            >
+
+                <div class="upload-box">
+
+                    <label>
+                        Select Crop Image
+                    </label>
+
+
+                    <input
+                        type="file"
+                        name="image"
+                        accept=".jpg,.jpeg,.png,.webp"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="detect-btn"
+                    >
+                        🔍 Detect Disease
+                    </button>
+
+                </div>
+
+            </form>
+
+
+
+            <!-- =================================================
+                 DISEASE ERROR
+            ================================================== -->
+
+            {% if disease_error %}
+
+            <div class="error-box">
+
+                ⚠️ {{ disease_error }}
+
+            </div>
+
+            {% endif %}
+
+
+
+            <!-- =================================================
+                 DISEASE RESULT
+            ================================================== -->
+
+            {% if disease_result %}
+
+            <div class="disease-result">
+
+                <h3>
+                    🌿 Disease Detection Result
+                </h3>
+
+
+                <div class="disease-result-grid">
+
+
+                    <!-- DETECTED DISEASE -->
+
+                    <div class="disease-info">
+
+                        <div class="disease-info-title">
+
+                            Detected Disease
+
+                        </div>
+
+
+                        <div class="disease-info-value">
+
+                            {{ disease_result.get(
+                                "disease",
+                                "Unknown"
+                            ) }}
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIDENCE -->
+
+                    <div class="disease-info">
+
+                        <div class="disease-info-title">
+
+                            Confidence
+
+                        </div>
+
+
+                        <div class="disease-info-value">
+
+                            {% if disease_result.get(
+                                "confidence"
+                            ) is not none %}
+
+                                {{
+                                    disease_result.get(
+                                        "confidence"
+                                    )
+                                }}%
+
+                            {% else %}
+
+                                N/A
+
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SEVERITY -->
+
+                    <div class="disease-info">
+
+                        <div class="disease-info-title">
+
+                            Severity
+
+                        </div>
+
+
+                        <div class="disease-info-value">
+
+                            {{
+                                disease_result.get(
+                                    "severity",
+                                    "UNKNOWN"
+                                )
+                            }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     RECOMMENDED ACTION
+                ============================================== -->
+
+                {% if disease_result.get("action") %}
+
+                <div class="action-box">
+
+                    <h4>
+                        🚜 Recommended Action
+                    </h4>
+
+                    <p>
+
+                        {{
+                            disease_result.get(
+                                "action"
+                            )
+                        }}
+
+                    </p>
+
+                </div>
+
+                {% endif %}
+
+
+
+                <!-- =============================================
+                     PREVENTION
+                ============================================== -->
+
+                {% if disease_result.get(
+                    "prevention"
+                ) %}
+
+                <div class="action-box">
+
+                    <h4>
+                        🛡️ Prevention / Care
+                    </h4>
+
+                    <p>
+
+                        {{
+                            disease_result.get(
+                                "prevention"
+                            )
+                        }}
+
+                    </p>
+
+                </div>
+
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div class="footer">
+
+        <div>
+            AGRORA Smart Agriculture System
+        </div>
+
+        <div>
+            Sense • Detect • Analyse • Predict • Recommend • Alert
+        </div>
+
+    </div>
+
+
 </div>
+
 
 </body>
 
